@@ -129,6 +129,8 @@ xtf_sss_ping process_side_scan_ping(XTFPINGHEADER *PingHeader, XTFFILEHEADER *XT
    ping.pitch_ =  M_PI/180.*PingHeader->SensorPitch;
    ping.sound_vel_ = PingHeader->SoundVelocity;
 
+   ping.altitude_ = PingHeader->SensorPrimaryAltitude;
+
    boost::posix_time::ptime data_time(boost::gregorian::date(PingHeader->Year, PingHeader->Month, PingHeader->Day), boost::posix_time::hours(PingHeader->Hour)+boost::posix_time::minutes(PingHeader->Minute)+boost::posix_time::seconds(PingHeader->Second)+boost::posix_time::milliseconds(10*int(PingHeader->HSeconds))); 
    stringstream time_ss;
    time_ss << data_time;
