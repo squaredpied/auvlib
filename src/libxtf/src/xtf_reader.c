@@ -159,10 +159,10 @@ BOOL ReadXTFHeader(int infl, XTFFILEHEADER *XTFFileHeader, unsigned char* buffer
       return FALSE;
    }
 
-   printf("This file contains %ld sonar pings and %ld bathymetry pings\n\n",
-      XTFFmtLastPingNumberInFile(infl, XTF_HEADER_SONAR, buffer),
-      XTFFmtLastPingNumberInFile(infl, XTF_HEADER_BATHY, buffer) + 
-      XTFFmtLastPingNumberInFile(infl, XTF_HEADER_ELAC, buffer));
+   // printf("This file contains %ld sonar pings and %ld bathymetry pings\n\n",
+   //    XTFFmtLastPingNumberInFile(infl, XTF_HEADER_SONAR, buffer),
+   //    XTFFmtLastPingNumberInFile(infl, XTF_HEADER_BATHY, buffer) + 
+   //    XTFFmtLastPingNumberInFile(infl, XTF_HEADER_ELAC, buffer));
 
    // align back to start of data.  0xFF matches any kind of packet.
    int StartPing = 0;
